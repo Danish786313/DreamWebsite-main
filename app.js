@@ -17,6 +17,7 @@ const cmsrout = require('./routes/cmsrout')
 const gallerycategory = require('./routes/gallerycategRoutes');
 const gallery = require('./routes/galleryRoutes');
 const productType = require('./routes/productType');
+const productroute = require('./routes/productsroute')
 app.use(bodyParser.json())
 app.use(cookieParser());
 
@@ -33,7 +34,7 @@ app.use("/api",gallerycategory);
 app.use("/api",gallery);
 app.use("/api",productType);
 app.use('/api', cmsrout)
-
+app.use('/api', productroute)
 
 const port = (process.env.PORT || 4000)
 
